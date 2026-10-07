@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest | Product Details</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">ShopNest</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">Offers</a>
+        </div>
+
+        <div class="search-wrap">
+            <input type="text" placeholder="Search products..." aria-label="Search products">
+        </div>
+
+        <div class="nav-buttons">
+            <a href="cart.html">🛒 Cart</a>
+            <a href="wishlist.html">♡ Wishlist</a>
+            <a href="auth.html">Login</a>
+        </div>
+    </nav>
+
+    <main class="product-detail-page">
+        <section id="product-detail-data" class="product-detail-container">
+            <div class="product-detail-gallery">
+                <div id="detail-image" class="detail-image main-image">🎧</div>
+                <div class="detail-thumbs">
+                    <div class="thumb">🎧</div>
+                    <div class="thumb">🔊</div>
+                    <div class="thumb">⚡</div>
+                </div>
+            </div>
+
+            <div class="product-detail-info">
+                <p id="detail-category" class="eyebrow">Wireless Audio</p>
+                <h1 id="detail-name">Premium Wireless Headset</h1>
+
+                <div id="detail-rating" class="detail-rating">⭐ 4.5 | 2,140 ratings</div>
+
+                <div class="detail-price-row">
+                    <span id="detail-price" class="detail-price">₹1,499</span>
+                    <span id="detail-old-price" class="detail-old-price">₹1,999</span>
+                    <span id="detail-discount" class="detail-discount">25% Off</span>
+                </div>
+
+                <p id="detail-description" class="detail-description">
+                    Experience rich sound, deep bass, and all-day comfort with this premium wireless headset.
+                    Perfect for music, calls, and travel.
+                </p>
+
+                <ul id="detail-features" class="feature-list">
+                    <li>Bluetooth 5.3 connectivity</li>
+                    <li>40-hour battery life</li>
+                    <li>Noise cancellation support</li>
+                    <li>Fast charging available</li>
+                </ul>
+
+                <div class="detail-actions">
+                    <button id="add-to-cart-detail" class="primary-btn large-btn">Add to Cart</button>
+                    <button id="wishlist-detail" type="button" class="secondary-btn large-btn light-btn" aria-pressed="false">♡ Wishlist</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/products.js"></script>
+</body>
+
+</html>

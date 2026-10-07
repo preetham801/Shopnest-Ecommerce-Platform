@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopNest</title>
+
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            ShopNest
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">Offers</a>
+        </div>
+
+        <!-- Search Bar -->
+        <form id="product-search-form" class="search-wrap" role="search">
+            <input id="product-search" type="search" placeholder="Search products..." aria-label="Search products">
+        </form>
+
+        <!-- Cart and Login -->
+        <div class="nav-buttons">
+            <a href="pages/cart.html">🛒 Cart</a>
+            <a href="pages/wishlist.html">♡ Wishlist</a>
+            <a href="pages/auth.html">Login</a>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Fresh deals for every day</p>
+            <h1>Shop Everything You Love</h1>
+            <p class="hero-text">
+                Discover amazing products at great prices, from tech gadgets to everyday essentials.
+            </p>
+            <div class="hero-actions">
+                <a href="#" class="primary-btn">Shop Now</a>
+                <a href="#" class="secondary-btn">View Deals</a>
+            </div>
+            <div class="mini-stats">
+                <div>
+                    <strong>25k+</strong>
+                    <span>Happy users</span>
+                </div>
+                <div>
+                    <strong>4.8/5</strong>
+                    <span>Customer rating</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Featured product display">
+            <div class="product-card">
+                <div class="product-image">🎧</div>
+                <div class="product-info">
+                    <span class="tag">New Arrival</span>
+                    <h3>Wireless Headset</h3>
+                    <div class="price-row">
+                        <span class="price">₹1,499</span>
+                        <span class="old-price">₹1,999</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="section-heading">
+            <p>Browse by category</p>
+            <h2>Popular Categories</h2>
+        </div>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-icon">📱</div>
+                <h3>Electronics</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">👗</div>
+                <h3>Fashion</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🏠</div>
+                <h3>Home</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">💄</div>
+                <h3>Beauty</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🏋️</div>
+                <h3>Sports</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🎒</div>
+                <h3>Accessories</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Cards Section -->
+    <section class="products-section">
+        <div class="section-heading">
+            <p>Top picks</p>
+            <h2>Featured Products</h2>
+        </div>
+
+        <p id="search-results-status" class="search-results-status" role="status" aria-live="polite" hidden></p>
+        <div class="product-filters" aria-label="Filter products">
+            <label for="category-filter">
+                Category
+                <select id="category-filter">
+                    <option value="all">All categories</option>
+                    <option value="Wireless Audio">Wireless Audio</option>
+                    <option value="Wearables">Wearables</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Travel">Travel</option>
+                </select>
+            </label>
+
+            <label for="price-filter">
+                Price
+                <select id="price-filter">
+                    <option value="all">Any price</option>
+                    <option value="under-1500">Under ₹1,500</option>
+                    <option value="1500-3000">₹1,500–₹3,000</option>
+                    <option value="over-3000">Over ₹3,000</option>
+                </select>
+            </label>
+
+            <label for="rating-filter">
+                Minimum rating
+                <select id="rating-filter">
+                    <option value="0">Any rating</option>
+                    <option value="4">4.0 and up</option>
+                    <option value="4.5">4.5 and up</option>
+                </select>
+            </label>
+
+            <label for="sort-products">
+                Sort by
+                <select id="sort-products">
+                    <option value="featured">Featured</option>
+                    <option value="price-low-high">Price: low to high</option>
+                    <option value="price-high-low">Price: high to low</option>
+                    <option value="rating">Highest rated</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </label>
+
+            <button id="clear-filters" type="button">Clear filters</button>
+        </div>
+        <div id="featured-products" class="product-grid"></div>
+        <p id="no-products-message" class="empty-cart" role="status" aria-live="polite" hidden>No products match your search.</p>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers">
+        <div class="section-heading">
+            <p>Special offers</p>
+            <h2>Hot Deals</h2>
+        </div>
+
+        <div class="offer-grid">
+            <div class="offer-card offer-one">
+                <span>Up to</span>
+                <h3>50% Off</h3>
+                <p>Weekend specials on top electronics</p>
+                <a href="#">Shop Now</a>
+            </div>
+
+            <div class="offer-card offer-two">
+                <span>Limited time</span>
+                <h3>Fashion Sale</h3>
+                <p>Fresh styles at unbeatable prices</p>
+                <a href="#">Explore</a>
+            </div>
+
+            <div class="offer-card offer-three">
+                <span>New season</span>
+                <h3>Home Essentials</h3>
+                <p>Upgrade your space with smart finds</p>
+                <a href="#">View Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/products.js"></script>
+
+</body>
+
+</html>

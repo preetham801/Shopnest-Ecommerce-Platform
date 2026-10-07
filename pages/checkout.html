@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest | Checkout</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">ShopNest</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">Offers</a>
+        </div>
+
+        <div class="search-wrap">
+            <input type="text" placeholder="Search products..." aria-label="Search products">
+        </div>
+
+        <div class="nav-buttons">
+            <a href="cart.html">🛒 Cart</a>
+            <a href="wishlist.html">♡ Wishlist</a>
+            <a href="auth.html">Login</a>
+        </div>
+    </nav>
+
+    <main class="checkout-page">
+        <section class="checkout-layout">
+            <div class="checkout-form-panel">
+                <div class="section-heading compact-heading">
+                    <p>Secure checkout</p>
+                    <h2>Delivery Details</h2>
+                </div>
+
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-row two-col">
+                        <div class="field-group">
+                            <label for="first-name">First Name</label>
+                            <input id="first-name" name="firstName" type="text" placeholder="Enter first name" autocomplete="given-name" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="last-name">Last Name</label>
+                            <input id="last-name" name="lastName" type="text" placeholder="Enter last name" autocomplete="family-name" required>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="email">Email Address</label>
+                        <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="Enter phone number" autocomplete="tel" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="4" placeholder="Enter your full address" autocomplete="street-address" required></textarea>
+                    </div>
+
+                    <div class="form-row two-col">
+                        <div class="field-group">
+                            <label for="city">City</label>
+                            <input id="city" name="city" type="text" placeholder="City" autocomplete="address-level2" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="zip-code">ZIP Code</label>
+                            <input id="zip-code" name="zipCode" type="text" placeholder="ZIP code" autocomplete="postal-code" required>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="payment-method">Payment Method</label>
+                        <select id="payment-method" name="paymentMethod" required>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="debit-card">Debit Card</option>
+                            <option value="upi">UPI</option>
+                            <option value="cash-on-delivery">Cash on Delivery</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="checkout-summary">
+                <h3>Payment Summary</h3>
+
+                <div id="checkout-items"></div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="checkout-subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="checkout-shipping">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Price savings</span>
+                    <span id="checkout-discount">-₹0</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="checkout-total">₹0</span>
+                </div>
+
+                <button class="checkout-btn" type="submit" form="checkout-form">Place Order</button>
+                <p id="checkout-message" class="checkout-message" aria-live="polite"></p>
+            </aside>
+        </section>
+    </main>
+    <script src="../js/products.js"></script>
+</body>
+
+</html>

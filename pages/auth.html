@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest | Login</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">ShopNest</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">Offers</a>
+        </div>
+
+        <div class="search-wrap">
+            <input type="text" placeholder="Search products..." aria-label="Search products">
+        </div>
+
+        <div class="nav-buttons">
+            <a href="cart.html">🛒 Cart</a>
+            <a href="wishlist.html">♡ Wishlist</a>
+            <a href="auth.html">Login</a>
+        </div>
+    </nav>
+
+    <main class="auth-page">
+        <section class="auth-box">
+            <div class="auth-header">
+                <p>Welcome back</p>
+                <h2>Login to ShopNest</h2>
+            </div>
+
+            <form id="login-form" class="auth-form" data-auth-mode="login" method="post">
+                <div class="field-group">
+                    <label for="login-email">Email</label>
+                    <input id="login-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="login-password">Password</label>
+                    <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" minlength="8" required>
+                </div>
+
+                <div class="auth-extra">
+                    <label><input name="remember" type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button class="login-btn" type="submit">Login</button>
+                <p id="login-message" class="auth-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="auth-switch">
+                <span>New to ShopNest?</span>
+                <a href="register.html">Create account</a>
+            </div>
+        </section>
+    </main>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>

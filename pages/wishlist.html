@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest | Wishlist</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">ShopNest</div>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#featured-products">Products</a>
+            <a href="../index.html#categories">Categories</a>
+            <a href="../index.html#offers">Offers</a>
+        </div>
+
+        <div class="search-wrap">
+            <input type="text" placeholder="Search products..." aria-label="Search products">
+        </div>
+
+        <div class="nav-buttons">
+            <a href="cart.html">🛒 Cart</a>
+            <a href="wishlist.html" aria-current="page">♡ Wishlist</a>
+            <a href="auth.html">Login</a>
+        </div>
+    </nav>
+
+    <main class="products-section wishlist-page">
+        <div class="section-heading">
+            <p>Your saved picks</p>
+            <h1>My Wishlist</h1>
+        </div>
+
+        <p id="wishlist-empty" class="empty-cart" role="status" aria-live="polite" hidden>
+            Your wishlist is empty. Tap a heart on a product to save it here.
+        </p>
+        <div id="wishlist-products" class="product-grid"></div>
+    </main>
+
+    <script src="../js/products.js"></script>
+</body>
+
+</html>

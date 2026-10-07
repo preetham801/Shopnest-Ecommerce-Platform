@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest | Create Account</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">ShopNest</div>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#featured-products">Products</a>
+            <a href="../index.html#categories">Categories</a>
+            <a href="../index.html#offers">Offers</a>
+        </div>
+
+        <div class="search-wrap">
+            <input type="text" placeholder="Search products..." aria-label="Search products">
+        </div>
+
+        <div class="nav-buttons">
+            <a href="cart.html">🛒 Cart</a>
+            <a href="wishlist.html">♡ Wishlist</a>
+            <a href="auth.html">Login</a>
+        </div>
+    </nav>
+
+    <main class="auth-page">
+        <section class="auth-box">
+            <div class="auth-header">
+                <p>Join ShopNest</p>
+                <h2>Create your account</h2>
+            </div>
+
+            <form id="register-form" class="auth-form" data-auth-mode="register" method="post">
+                <div class="field-group">
+                    <label for="register-name">Name</label>
+                    <input id="register-name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="register-email">Email</label>
+                    <input id="register-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="register-password">Password</label>
+                    <input id="register-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input id="confirm-password" name="confirmPassword" type="password" placeholder="Re-enter your password" autocomplete="new-password" minlength="8" required>
+                </div>
+
+                <button class="login-btn" type="submit">Create Account</button>
+                <p id="register-message" class="auth-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="auth-switch">
+                <span>Already have an account?</span>
+                <a href="auth.html">Login</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>
