@@ -97,7 +97,12 @@ function toggleWishlist(productId) {
     return !isSaved;
 }
 
-const featuredProductsContainer = document.getElementById('featured-products');
+const featuredProductsContainer = document.getElementById('featured-products-grid');
+const productSearchInput = document.getElementById('product-search');
+
+if (productSearchInput) {
+    productSearchInput.value = new URLSearchParams(window.location.search).get('q') || '';
+}
 
 function renderProducts() {
     if (!featuredProductsContainer) {
@@ -181,8 +186,6 @@ function renderProducts() {
 
 renderProducts();
 
-const productSearchInput = document.getElementById('product-search');
-
 if (productSearchInput) {
     productSearchInput.addEventListener('input', () => {
         renderProducts();
@@ -240,14 +243,14 @@ function saveCart(cart) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
 }
 
-function addToCart(productIndex) {
+function addToCart(productIndex, quantity = 1) {
     const cart = getCart();
     const existingItem = cart.find((item) => item.id === productIndex);
 
     if (existingItem) {
-        existingItem.quantity += 1;
+        existingItem.quantity += quantity;
     } else {
-        cart.push({ id: productIndex, quantity: 1 });
+        cart.push({ id: productIndex, quantity });
     }
 
     saveCart(cart);
@@ -474,10 +477,31 @@ if (detailContainer) {
             .join('');
 
         const addToCartButton = document.getElementById('add-to-cart-detail');
-        if (addToCartButton) {
+        const quantityInput = document.getElementById('detail-quantity');
+
+        const addSelectedQuantity = () => {
+            if (!quantityInput.reportValidity()) {
+                return false;
+            }
+
+            addToCart(productId, Number(quantityInput.value));
+            return true;
+        };
+
+        if (addToCartButton && quantityInput) {
             addToCartButton.addEventListener('click', () => {
-                addToCart(productId);
-                alert(`${product.name} added to cart.`);
+                if (addSelectedQuantity()) {
+                    alert(`${quantityInput.value} × ${product.name} added to cart.`);
+                }
+            });
+        }
+
+        const buyNowButton = document.getElementById('buy-now-detail');
+        if (buyNowButton && quantityInput) {
+            buyNowButton.addEventListener('click', () => {
+                if (addSelectedQuantity()) {
+                    window.location.href = 'checkout.html';
+                }
             });
         }
 

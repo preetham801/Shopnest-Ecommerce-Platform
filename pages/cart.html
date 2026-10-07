@@ -13,15 +13,15 @@
         <div class="logo">ShopNest</div>
 
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">Categories</a>
-            <a href="#">Offers</a>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#featured-products">Products</a>
+            <a href="../index.html#categories">Categories</a>
+            <a href="../index.html#offers">Offers</a>
         </div>
 
-        <div class="search-wrap">
-            <input type="text" placeholder="Search products..." aria-label="Search products">
-        </div>
+        <form class="search-wrap" role="search" action="../index.html" method="get">
+            <input name="q" type="search" placeholder="Search products..." aria-label="Search products">
+        </form>
 
         <div class="nav-buttons">
             <a href="cart.html">🛒 Cart</a>
@@ -66,6 +66,38 @@
             </aside>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <section class="footer-column">
+                <h2>ShopNest</h2>
+                <p>A friendly storefront demo built as a learning project.</p>
+            </section>
+            <nav class="footer-column" aria-label="Explore ShopNest">
+                <h3>Explore</h3>
+                <a href="../index.html#featured-products">Products</a>
+                <a href="../index.html#categories">Categories</a>
+                <a href="../index.html#offers">Offers</a>
+            </nav>
+            <section class="footer-column">
+                <h3>Customer Service</h3>
+                <p>Contact details will be added as the project grows.</p>
+                <a href="../index.html#privacy-policy">Privacy Policy</a>
+                <a href="../index.html#terms">Terms</a>
+            </section>
+            <section class="footer-column">
+                <h3>Follow Along</h3>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.youtube.com/">YouTube</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>Privacy: this learning demo does not process real payments or submit customer details to a server.</p>
+            <p>Terms: product, price, and order information is sample content for practice.</p>
+            <p>© 2026 ShopNest. Built for learning.</p>
+        </div>
+    </footer>
 
     <script src="../js/products.js"></script>
 </body>

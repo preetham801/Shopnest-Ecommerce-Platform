@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ShopNest</title>
+    <meta name="description" content="Explore everyday finds and sample deals in the ShopNest storefront demo.">
+    <title>ShopNest | Everyday Finds</title>
 
     <!-- Connecting CSS -->
     <link rel="stylesheet" href="style.css">
@@ -23,15 +23,15 @@
 
         <!-- Navigation Links -->
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">Categories</a>
-            <a href="#">Offers</a>
+            <a href="index.html">Home</a>
+            <a href="#featured-products">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#offers">Offers</a>
         </div>
 
         <!-- Search Bar -->
         <form id="product-search-form" class="search-wrap" role="search">
-            <input id="product-search" type="search" placeholder="Search products..." aria-label="Search products">
+            <input id="product-search" name="q" type="search" placeholder="Search products..." aria-label="Search products">
         </form>
 
         <!-- Cart and Login -->
@@ -52,8 +52,8 @@
                 Discover amazing products at great prices, from tech gadgets to everyday essentials.
             </p>
             <div class="hero-actions">
-                <a href="#" class="primary-btn">Shop Now</a>
-                <a href="#" class="secondary-btn">View Deals</a>
+                <a href="#featured-products" class="primary-btn">Shop Now</a>
+                <a href="#offers" class="secondary-btn">View Deals</a>
             </div>
             <div class="mini-stats">
                 <div>
@@ -118,7 +118,7 @@
     </section>
 
     <!-- Product Cards Section -->
-    <section class="products-section">
+    <section id="featured-products" class="products-section">
         <div class="section-heading">
             <p>Top picks</p>
             <h2>Featured Products</h2>
@@ -169,7 +169,7 @@
 
             <button id="clear-filters" type="button">Clear filters</button>
         </div>
-        <div id="featured-products" class="product-grid"></div>
+        <div id="featured-products-grid" class="product-grid"></div>
         <p id="no-products-message" class="empty-cart" role="status" aria-live="polite" hidden>No products match your search.</p>
     </section>
 
@@ -185,24 +185,59 @@
                 <span>Up to</span>
                 <h3>50% Off</h3>
                 <p>Weekend specials on top electronics</p>
-                <a href="#">Shop Now</a>
+                <a href="#featured-products">Shop Now</a>
             </div>
 
             <div class="offer-card offer-two">
                 <span>Limited time</span>
                 <h3>Fashion Sale</h3>
                 <p>Fresh styles at unbeatable prices</p>
-                <a href="#">Explore</a>
+                <a href="#featured-products">Explore</a>
             </div>
 
             <div class="offer-card offer-three">
                 <span>New season</span>
                 <h3>Home Essentials</h3>
                 <p>Upgrade your space with smart finds</p>
-                <a href="#">View Collection</a>
+                <a href="#featured-products">View Collection</a>
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <section id="about-shopnest" class="footer-column">
+                <h2>ShopNest</h2>
+                <p>A friendly storefront demo built as a learning project.</p>
+            </section>
+
+            <nav class="footer-column" aria-label="Explore ShopNest">
+                <h3>Explore</h3>
+                <a href="#featured-products">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#offers">Offers</a>
+            </nav>
+
+            <section id="customer-service" class="footer-column">
+                <h3>Customer Service</h3>
+                <p id="contact">Contact details will be added as the project grows.</p>
+                <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms">Terms</a>
+            </section>
+
+            <section class="footer-column">
+                <h3>Follow Along</h3>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.youtube.com/">YouTube</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p id="privacy-policy">Privacy: this learning demo does not process real payments or submit customer details to a server.</p>
+            <p id="terms">Terms: product, price, and order information is sample content for practice.</p>
+            <p>© 2026 ShopNest. Built for learning.</p>
+        </div>
+    </footer>
 
     <script src="js/products.js"></script>
 
