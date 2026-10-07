@@ -1,42 +1,42 @@
-# ShopNest
+# ShopNest Ecommerce Platform
 
-ShopNest is a responsive storefront demo built with plain HTML, CSS, and JavaScript. It is a learning project and can be hosted as a static website.
+ShopNest is a modern, responsive storefront demo built with HTML, CSS, and JavaScript as a learning project.
 
 ## Features
 
-- Product browsing, details, search, filters, and sorting
-- Cart quantities, totals, and a saved wishlist using browser local storage
-- Demo checkout form and client-side login and registration validation
+- Browse product details, search, filter, and sort products
+- Manage a cart and wishlist saved in browser local storage
 - Responsive layouts for desktop and mobile
+- Demo checkout, login, and registration form validation
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the project folder with a local web server. For example, in VS Code you can use the Live Server extension and open the local URL it provides.
+Open `index.html` in a browser, or use a local web server such as the VS Code Live Server extension.
 
-## Publish as a static demo
+## Deploy on Vercel
 
-This project does not need a build step:
+This is a static website and does not require a build step:
 
-1. Create a GitHub repository for the project and push the files to its default branch.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, select the default branch and the `/ (root)` folder, then save.
-4. Wait for GitHub Pages to publish the site and open the URL shown in the Pages settings.
+1. Sign in to Vercel and choose **Add New → Project**.
+2. Import the `preetham801/Shopnest-Ecommerce-Platform` GitHub repository.
+3. Leave the framework preset as **Other**, with no build command and no output directory.
+4. Deploy. Vercel will provide the published site URL.
 
-The site uses relative paths, so its pages and styles can be served from a GitHub Pages project URL.
+Subsequent pushes to the connected GitHub branch can trigger automatic deployments.
 
-## Important demo limitations
+## Demo limitations
 
-- Login and registration only validate fields in the browser; no accounts are created.
-- Checkout does not submit orders or process payments.
-- Cart and wishlist data stay in the current browser's local storage.
+- Login and registration only validate form fields in the browser; they do not create accounts.
+- Checkout does not send orders or process payments.
+- Cart and wishlist data are kept in the current browser's local storage.
+- Product, price, offer, rating, and delivery information is sample content.
 - Do not enter real personal, account, or payment information.
-- Product, offer, rating, and delivery information is sample content.
 
-This is suitable for a static portfolio or learning-project demo, not for taking real orders. A real store needs a secure backend, authentication, order handling, payment-provider integration, and appropriate privacy and legal pages.
+This project is suitable for a static learning or portfolio demo, not for accepting real orders. A production store requires a secure backend, authentication, order processing, payment-provider integration, and appropriate privacy and legal policies.
 
-## Before sharing the demo
+## Before sharing
 
-- Check the homepage, product details, cart, wishlist, login, registration, and checkout pages.
-- Test the main navigation and search on desktop and mobile.
-- Confirm the browser shows no missing pages, assets, or JavaScript errors.
-- Review any sample content you want to personalize before publishing.
+- Test the homepage, product details, cart, wishlist, login, registration, and checkout.
+- Test navigation and search on desktop and mobile.
+- Confirm there are no missing files or browser JavaScript errors.
+- Review and personalize any sample content you want to publish.
